@@ -1,0 +1,104 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.app {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: rgb(255, 255, 228);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.outer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  max-width: 550px;
+  gap: 20px;
+}
+
+.accItem {
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.159);
+  padding: 20px;
+  background-color: rgba(246, 255, 0, 0.142);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: #8e6fee;
+  cursor: pointer;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.content .number,
+.content .qna .title,
+.toggle {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.content .qna {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.content .subtitle {
+  color: #3a3a36;
+  font-weight: 500;
+}
+
+.topLine {
+  display: none;
+}
+
+.accItem.active .topLine {
+  display: block;
+  width: 100%;
+  height: 4px;
+  background-color: rgb(103, 210, 103);
+}
+
+.accItem.active .content .number,
+.accItem.active .content .title,
+.accItem.active .content .toggle {
+  color: rgb(103, 210, 103);
+}
+
+.toggle {
+  cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .outer {
+    width: 90%;
+  }
+  .accItem {
+    padding: 15px;
+  }
+  .content {
+    gap: 15px;
+  }
+
+  .content .number,
+  .content .qna .title,
+  .toggle {
+    font-size: 18px;
+  }
+  .content .qna {
+    gap: 8px;
+  }
+}
